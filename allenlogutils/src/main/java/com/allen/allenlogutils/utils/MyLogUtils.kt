@@ -95,31 +95,35 @@ object MyLogUtils {
 
     }
 
-    fun eLog(msg: String,tag: String = TAG) {
-        if (msg.isNotBlank()) {
+    fun eLog(msg: Any,tag: String = TAG) {
+        val content = msg.toString()
+        if (content.isNotBlank()) {
             val s = getMethodNames()
-            Log.e(tag, String.format(s, msg))
+            Log.e(tag, String.format(s, content))
         }
     }
 
     fun wLog(msg: String,tag: String = TAG) {
-        if (msg.isNotBlank()) {
+        val content = msg.toString()
+        if (content.isNotBlank()) {
             val s = getMethodNames()
-            Log.e(tag, String.format(s, msg))
+            Log.e(tag, String.format(s, content))
         }
     }
 
     fun iLog(msg: String,tag: String = TAG) {
-        if (msg.isNotBlank()) {
+        val content = msg.toString()
+        if (content.isNotBlank()) {
             val s = getMethodNames()
-            Log.i(tag, String.format(s, msg))
+            Log.i(tag, String.format(s, content))
         }
     }
 
     fun dLog(msg: String,tag: String = TAG) {
-        if (msg.isNotBlank()) {
+        val content = msg.toString()
+        if (content.isNotBlank()) {
             val s = getMethodNames()
-            Log.d(tag, String.format(s, msg))
+            Log.d(tag, String.format(s, content))
         }
     }
 }
